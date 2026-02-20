@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
+import { Disclaimer } from "@/components/ui/Disclaimer";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import "./globals.css";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ScrollToTop />
+        <Disclaimer />
       </body>
     </html>
   );
