@@ -29,6 +29,7 @@ export const CONTACT_CONFIG = {
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Our Services" },
+  { href: "/blogs", label: "Blogs" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -36,7 +37,7 @@ export const NAV_LINKS = [
 export const HERO_CONFIG = {
   headline: "Expert Chartered Accountancy & Advisory",
   subheadline:
-    "We deliver clarity in numbers and strategy—audit, tax, compliance, and advisory tailored for businesses and individuals.",
+    "We deliver clarity in numbers and strategy - audit, tax, compliance, and advisory tailored for businesses and individuals.",
   primaryCta: "Get in touch",
   secondaryCta: "Our services",
 } as const;
