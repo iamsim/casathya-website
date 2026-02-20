@@ -4,3 +4,5 @@ export { AboutView } from "./AboutView";
 export { ContactView } from "./ContactView";
 export { BlogsView } from "./BlogsView";
 export { BlogPostView } from "./BlogPostView";
+export { CareersView } from "./CareersView";
+export { JobDetailView } from "./JobDetailView";
