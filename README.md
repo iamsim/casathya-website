@@ -75,6 +75,15 @@ npm run lint    # Run ESLint
 
 Classic palette: **navy**, **gold**, and **cream** (CSS variables in `app/globals.css`).
 
+## Deploy on Vercel
+
+1. **Push your code** to [GitHub](https://github.com/iamsim/casathya-website) (if not already).
+2. Go to [vercel.com](https://vercel.com) → **Add New…** → **Project** → import your repo.
+3. Vercel will detect Next.js. Click **Deploy** (default build settings are fine).
+4. **Environment variables** (optional): if you use Contentful, add `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` in **Project → Settings → Environment Variables**, then redeploy.
+
+Each push to your main branch will trigger a new deployment. You can also deploy from the CLI: `npx vercel` (first time) then `vercel --prod` for production.
+
 ## Repository
 
 [https://github.com/iamsim/casathya-website](https://github.com/iamsim/casathya-website)
