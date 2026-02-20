@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Tell Tailwind v4 where to scan for class names */
+@source "../app/**/*.{js,ts,jsx,tsx}";
+@source "../components/**/*.{js,ts,jsx,tsx}";
+@source "../lib/**/*.{js,ts,jsx,tsx}";
+
 /* ---------------------------------------------------------------------------
    Theme: Classic professional palette for Chartered Accountant branding
    - Navy: authority, trust
