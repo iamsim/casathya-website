@@ -83,7 +83,7 @@ export function AboutView() {
                   </div>
 
                   <p className="mt-3 text-sm text-[var(--muted)]">
-                    {profile.experience} of experience
+                    {profile.experience}
                   </p>
 
                   {/* Expertise */}
@@ -92,17 +92,36 @@ export function AboutView() {
                   </p>
                   <ul className="mt-2 space-y-1 text-sm text-[var(--muted)]">
                     {profile.expertise.map((item) => (
-                      <li key={item} className="flex items-center gap-2">
-                        <span className="h-1 w-1 rounded-full bg-[var(--gold)]" />
-                        {item}
+                      <li key={item} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--gold)]" />
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* Bio */}
-                  <p className="mt-5 border-t border-[var(--border)] pt-5 text-[var(--muted)] leading-relaxed">
-                    {profile.bio}
-                  </p>
+                  {/* Bio or sections */}
+                  <div className="mt-5 border-t border-[var(--border)] pt-5 space-y-5">
+                    {"sections" in profile && profile.sections ? (
+                      profile.sections.map((section) => (
+                        <div key={section.title}>
+                          <h3 className="text-sm font-semibold text-[var(--navy)]">
+                            {section.title}
+                          </h3>
+                          <div className="mt-2 space-y-2 text-[var(--muted)] leading-relaxed">
+                            {section.content.split(/\n\n+/).map((para, i) => (
+                              <p key={i}>{para}</p>
+                            ))}
+                          </div>
+                        </div>
+                      ))
+                    ) : "bio" in profile && profile.bio ? (
+                      <div className="space-y-2 text-[var(--muted)] leading-relaxed">
+                        {profile.bio.split(/\n\n+/).map((para, i) => (
+                          <p key={i}>{para}</p>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
                 </div>
               </motion.article>
             ))}

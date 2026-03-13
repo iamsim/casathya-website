@@ -66,22 +66,58 @@ export function Disclaimer() {
         >
           Disclaimer
         </h2>
-        <div id="disclaimer-content" className="mb-6 space-y-3 text-sm leading-relaxed text-[var(--foreground)]">
+        <div
+          id="disclaimer-content"
+          className="mb-6 max-h-[60vh] overflow-y-auto space-y-3 text-sm leading-relaxed text-[var(--foreground)] pr-1"
+        >
           <p>
-            As per the provisions of the <strong>The Chartered Accountant Act, 1949</strong>, we
-            are not permitted to solicit work and advertise. By clicking on the &quot;I agree&quot;
-            below, the user acknowledges the following:
+            Your access to this website constitutes your agreement to be bound by all terms and
+            conditions listed herein below. If you do not agree to this, you may not access or
+            otherwise use the website.
           </p>
-          <ol className="list-inside list-[lower-roman] space-y-2 pl-1">
-            <li>
-              there has been no advertisement, personal communication, solicitation, invitation or
-              inducement of any sort whatsoever from us to solicit any work through this website;
-            </li>
-            <li>the user wishes to gain more information about us for his/her own information and use;</li>
-            <li>
-              the information about us is provided to the user only on his/her specific request;
-            </li>
-          </ol>
+          <p>
+            The material displayed on this website may be downloaded for non-commercial, personal
+            use only. Distribution, modification, transmission, use or reuse of the content and
+            various facilities available on this website without written permission is not
+            permissible.
+          </p>
+          <p>
+            The firm reserves the right, for any reason, in its sole discretion, to terminate,
+            change or suspend any aspect of this website, including, but not limited to, content
+            or features.
+          </p>
+          <p>
+            All reasonable efforts shall be made to ensure that the information contained on this
+            website is updated, accurate and complete. However, no representations or warranties
+            are made (express or implied) as to the reliability, accuracy or completeness of such
+            information.
+          </p>
+          <p>
+            The site provides links to websites or resources operated by others over which we do
+            not have any control. We do not undertake any responsibility for the availability of
+            such external resources. We shall not be liable for any content, advertising, products,
+            services or other materials on or available from such sites or resources. The
+            inclusion of hyperlinks to such sites does not imply any endorsement of the material
+            on such websites or any association with their operators. We shall not be responsible
+            or liable, directly or indirectly, for any damage or loss caused or alleged to be
+            caused by or in connection with use of or reliance on any such content or service
+            available on or through any such site or resource. The site, including all content,
+            functions, and information made available on or accessed through the site, is provided
+            on an &quot;as is available&quot; basis without representations or warranties of any
+            kind whatsoever, express or implied, including without limitation, non-infringement,
+            merchantability or fitness for a particular purpose. The firm does not warrant that
+            the site or the functions, features or content contained therein will be timely,
+            secure, uninterrupted or error free, or that defects will be corrected. No advice or
+            information, whether oral or written, obtained by you from us or through this website
+            shall create any warranty not expressly made herein.
+          </p>
+          <p>
+            In no event shall the firm be liable for any special, incidental or consequential
+            damages that are directly or indirectly related to the use of, or the inability to use
+            this website or the content, materials and functions related thereto, including
+            without limitation, loss of revenue or anticipated profits or lost business or lost
+            sales.
+          </p>
         </div>
         <div className="flex justify-end">
           <button

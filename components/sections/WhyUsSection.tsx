@@ -19,7 +19,7 @@ export function WhyUsSection() {
             Why choose us
           </p>
           <h2 className="mt-3 font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
-            Trusted by businesses and individuals
+            Why Choose Us?
           </h2>
         </motion.div>
 
@@ -36,9 +36,7 @@ export function WhyUsSection() {
               variants={fadeInUp}
               className="relative rounded-xl border border-[var(--navy-light)] bg-[var(--navy-light)]/50 p-8 backdrop-blur-sm"
             >
-              <span className="absolute left-8 top-8 text-4xl font-serif font-semibold text-[var(--gold)]/20">
-                0{WHY_US_CONFIG.indexOf(item) + 1}
-              </span>
+              
               <h3 className="relative font-serif text-xl font-semibold">
                 {item.title}
               </h3>

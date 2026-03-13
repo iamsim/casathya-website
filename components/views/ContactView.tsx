@@ -12,12 +12,12 @@ export function ContactView() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const address = CONTACT_CONFIG.officeAddress;
-  const fullAddress = [
+  const addressLines = [
     address.line1,
     address.line2,
-    address.city,
-    `${address.state} - ${address.pincode}`,
-  ].join(", ");
+    "line3" in address && address.line3 ? address.line3 : null,
+    `${address.city} ${address.pincode}`,
+  ].filter(Boolean) as string[];
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -52,7 +52,7 @@ export function ContactView() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...defaultTransition, delay: 0.1 }}
           >
-            Contact us
+            Let's Connect
           </motion.h1>
           <motion.p
             className="mx-auto mt-6 max-w-2xl text-lg text-[var(--cream)]/75"
@@ -60,8 +60,9 @@ export function ContactView() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...defaultTransition, delay: 0.2 }}
           >
-            Visit our office, call us, or send a message. We respond within 24
-            hours.
+            Whether you are an entrepreneur seeking to optimise your tax
+            structure or a corporate entity looking for seamless statutory
+            compliance, we are here to help.
           </motion.p>
         </div>
       </section>
@@ -102,33 +103,31 @@ export function ContactView() {
                 transition={{ ...defaultTransition, delay: 0.1 }}
               >
                 <h2 className="font-serif text-lg font-semibold text-[var(--navy)]">
-                  Office location
+                  Office Address
                 </h2>
                 <address className="mt-3 text-sm text-[var(--muted)] not-italic leading-relaxed">
-                  {address.line1}
-                  <br />
-                  {address.line2}
-                  <br />
-                  {address.city}, {address.state} - {address.pincode}
+                  {addressLines.map((line) => (
+                    <span key={line}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
                 </address>
                 <div className="mt-5 space-y-3 border-t border-[var(--border)] pt-5">
                   <p className="text-xs font-semibold uppercase tracking-wider text-[var(--gold)]">
-                    Email
-                  </p>
-                  <a
-                    href={`mailto:${CONTACT_CONFIG.email}`}
-                    className="block text-[var(--navy)] hover:text-[var(--gold)]"
-                  >
-                    {CONTACT_CONFIG.email}
-                  </a>
-                  <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-[var(--gold)]">
-                    Phone
+                    Contact
                   </p>
                   <a
                     href={`tel:${CONTACT_CONFIG.phone.replace(/\s/g, "")}`}
                     className="block text-[var(--navy)] hover:text-[var(--gold)]"
                   >
                     {CONTACT_CONFIG.phone}
+                  </a>
+                  <a
+                    href={`mailto:${CONTACT_CONFIG.email}`}
+                    className="block text-[var(--navy)] hover:text-[var(--gold)]"
+                  >
+                    {CONTACT_CONFIG.email}
                   </a>
                 </div>
               </motion.div>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServicesView } from "@/components/views";
 
 export const metadata: Metadata = {
-  title: "Our Services | Chartered Accountants",
+  title: "Our Expertise | Chartered Accountants",
   description:
-    "Indian chartered accountancy services: statutory audit, tax, GST, ROC compliance, company incorporation, accounting, Ind AS, IBC, due diligence, and transfer pricing.",
+    "A synergy of global standards and local mastery: international taxation & global mobility, strategic domestic taxation & GST, audit, assurance and governance.",
 };
 
 export default function Page() {
