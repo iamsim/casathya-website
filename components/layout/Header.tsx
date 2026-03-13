@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -18,9 +19,24 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8">
         <Link
           href="/"
-          className="font-serif text-xl font-semibold tracking-tight text-[var(--navy)] transition-colors hover:text-[var(--gold)]"
+          className="flex items-center gap-3 text-[var(--navy)] transition-colors hover:text-[var(--gold)]"
         >
-          {SITE_CONFIG.name}
+          <Image
+            src="/ca-india-logo.svg"
+            alt="Chartered Accountant logo"
+            width={40}
+            height={40}
+            priority
+            className="h-8 w-8 sm:h-9 sm:w-9 object-contain shadow-lg"
+          />
+          <span className="flex flex-col leading-tight">
+            <span className="font-serif text-base font-semibold tracking-tight sm:text-lg">
+              Sahana D M &amp; Associates
+            </span>
+            <span className="hidden text-xs text-[var(--muted)] sm:block">
+              {SITE_CONFIG.tagline}
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">

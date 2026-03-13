@@ -38,7 +38,7 @@ export const NAV_LINKS = [
 export const HERO_CONFIG = {
   headline: "Expert Chartered Accountancy & Advisory",
   subheadline:
-    "We deliver clarity in numbers and strategy - audit, tax, compliance, and advisory tailored for businesses and individuals.",
+    "We provide high-impact taxation and audit services that bridge the gap between complex statutory requirements and seamless business operations. Established in 2018, our firm is built on a foundation of technical excellence, meticulous advocacy, and a commitment to end-to-end accountability",
   primaryCta: "Get in touch",
   secondaryCta: "Our expertise",
 } as const;
