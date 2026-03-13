@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 
-const STORAGE_KEY = "ca-disclaimer-agreed";
+const STORAGE_KEY = "ca-disclaimer-agreed-at";
+const LEGACY_KEY = "ca-disclaimer-agreed";
 
 export function Disclaimer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +18,34 @@ export function Disclaimer() {
     // Defer so we're definitely on client after hydration
     const id = setTimeout(() => {
       try {
-        const agreed = window.localStorage.getItem(STORAGE_KEY);
-        setIsOpen(!agreed);
+        const storage = window.localStorage;
+        const now = Date.now();
+        const stored = storage.getItem(STORAGE_KEY);
+        const legacy = storage.getItem(LEGACY_KEY);
+
+        let agreedAt: number | null = null;
+
+        if (stored) {
+          const parsed = Number(stored);
+          if (!Number.isNaN(parsed)) {
+            agreedAt = parsed;
+          }
+        } else if (legacy) {
+          // Migrate legacy boolean flag to a timestamp so behaviour stays consistent
+          agreedAt = now;
+          storage.removeItem(LEGACY_KEY);
+          storage.setItem(STORAGE_KEY, String(now));
+        }
+
+        // If never agreed, show immediately
+        if (!agreedAt) {
+          setIsOpen(true);
+          return;
+        }
+
+        const FIFTEEN_MINUTES = 15 * 60 * 1000;
+        const shouldShow = now - agreedAt >= FIFTEEN_MINUTES;
+        setIsOpen(shouldShow);
       } catch {
         setIsOpen(true);
       }
@@ -37,7 +64,12 @@ export function Disclaimer() {
 
   const handleAgree = () => {
     if (typeof window !== "undefined") {
-      localStorage.setItem(STORAGE_KEY, "true");
+      try {
+        window.localStorage.setItem(STORAGE_KEY, String(Date.now()));
+        window.localStorage.removeItem(LEGACY_KEY);
+      } catch {
+        // Ignore storage errors; modal will reappear next visit
+      }
     }
     setIsOpen(false);
   };
