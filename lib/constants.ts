@@ -217,7 +217,7 @@ export const ABOUT_PROFILES = [
   {
     id: "2",
     name: "Aditya Nalpet",
-    designation: "Senior Associate - M.com, B.Com",
+    designation: "Senior Associate",
     qualifications: ["M.Com", "B.Com"],
     experience: "14+ Years of Professional Experience",
     expertise: [
