@@ -91,38 +91,91 @@ export const CTA_CONFIG = {
 
 /** Our Expertise page: intro and core service verticals */
 export const OUR_EXPERTISE_PAGE_CONFIG = {
-  introHeading:
-    "Our Expertise: A Synergy of Global Standards & Local Mastery",
+  introHeading: "Our Expertise",
   introBody:
-    "At Sahana D M and Associates, we bridge the gap between \"Big 4\" technical rigor and boutique-style personalised attention. By combining specialised international tax experience with deep-rooted domestic audit leadership, we provide a 360-degree financial framework for our clients.",
+    "At Sahana D M & Associates, we bridge the gap between complex statutory requirements and seamless business operations. Our team combines specialised international tax experience from KPMG with deep-rooted domestic audit leadership from over a decade at reputable firms — giving clients access to Big 4 thinking with the personalised attention of a boutique practice.",
   verticals: [
     {
       title: "International Taxation & Global Mobility",
       intro:
-        "Leveraging a specialised background at Big4, we navigate the complexities of cross-border financial interests.",
+        "Drawing on five years of specialised practice at KPMG, we navigate the full complexity of cross-border financial interests — from expatriate tax management to treaty-based planning for multinational structures.",
       items: [
-        "Expatriate Tax Management: End-to-end advisory for inbound and outbound individuals.",
-        "DTAA Optimisation: Strategic advice on Double Taxation Avoidance Agreements to ensure global tax efficiency.",
+        "Expatriate Taxation",
+        "DTAA Optimisation",
+        "Inbound & Outbound Advisory",
+        "Income Tax Act Compliance",
+        "End-to-end expatriate management for inbound and outbound professionals",
+        "DTAA structuring to eliminate double-taxation exposure",
+        "Statutory compliance under Income Tax Act and Indian labour laws",
+        "CIT-level appeals and tax assessments managed annually",
       ],
     },
     {
-      title: "Strategic Domestic Taxation & GST",
+      title: "Strategic Domestic Taxation & Tax Planning",
       intro:
-        "We simplify the Indian tax landscape for entrepreneurs and corporate entities through proactive planning.",
+        "We simplify India's evolving direct tax landscape for entrepreneurs and corporate entities through proactive planning, rigorous compliance, and litigation-ready advocacy — so your business can grow without tax uncertainty as a burden.",
       items: [
-        "GST Advisory & Litigation: Expert representation, advance rulings, and business-model-specific GST categorisation.",
-        "Tax Optimisation: Designing strategies to legally minimise tax outflows while maximising fiscal health.",
-        "Corporate Compliance: Seamless filing of Income Tax, GST, and ROC returns.",
+        "Income Tax Advisory",
+        "Tax Optimisation",
+        "Scrutiny Assessments",
+        "Litigation Support",
+        "High-impact tax strategies to legally reduce outflows for startups and enterprises",
+        "Scrutiny and departmental proceedings management end-to-end",
+        "Income Tax return filing with zero-error, on-time reporting",
+        "Advance tax planning and fiscal optimisation opportunities",
+        "Appeals representation at CIT level across diverse client profiles",
+        "Litigation preparation across firms, trusts, and individuals",
+      ],
+    },
+    {
+      title: "GST Advisory & Litigation",
+      intro:
+        "From business-model-specific GST categorisation to formal advance rulings and departmental representation, we provide a complete GST solution — compliance, strategy, and advocacy under one roof.",
+      items: [
+        "GST Registration & Compliance",
+        "Advance Rulings",
+        "Departmental Representation",
+        "Reconciliation",
+        "Business-model-specific GST categorisation for regulatory clarity",
+        "End-to-end GST return filing and reconciliation management",
+        "Formal representations in litigation and advance ruling proceedings",
+        "Strategic advisory to optimise GST positions across supply chains",
+        "ROC and statutory filings with zero-error compliance",
+        "Compliance health checks and input tax credit optimisation",
       ],
     },
     {
       title: "Audit, Assurance & Governance",
       intro:
-        "With a combined history of leading audits for listed companies, PSUs, and startups, we provide robust financial oversight.",
+        "With a combined history of leading audits for listed companies, PSUs, NBFCs, and venture capital firms, we deliver robust financial oversight that gives stakeholders genuine confidence in the numbers.",
       items: [
-        "Statutory Audits: Expert auditing for NBFCs, Software Development firms, and Venture Capital funds.",
-        "Internal Control Systems: Implementing rigorous internal mechanisms to ensure statutory concurrence and operational transparency.",
-        "Public Sector Expertise: Proven experience in internal audits for entities like the Uranium Corporation of India Limited.",
+        "Statutory Audits",
+        "Internal Audits",
+        "NBFC & VC Audits",
+        "Public Sector",
+        "Statutory audits for NBFCs, software firms, and venture capital funds",
+        "Internal audits for public companies and government institutions",
+        "PSU audit experience including Uranium Corporation of India Limited",
+        "VAT and inspection audit submissions for listed companies",
+        "Internal control systems for operational transparency",
+        "Bank concurrent audits and regulatory compliance reviews",
+      ],
+    },
+    {
+      title: "Corporate Advisory & Business Structuring",
+      intro:
+        "Beyond compliance, we serve as a strategic partner — structuring your business for long-term fiscal health, regulatory resilience, and scalable growth. Our entrepreneur-first approach ensures that complexity never slows you down.",
+      items: [
+        "Business Structuring",
+        "Companies Act, 2013",
+        "Startup Advisory",
+        "Corporate Compliance",
+        "Business model structuring for fiscal health and regulatory resilience",
+        "Companies Act, 2013 compliance across the full statutory spectrum",
+        "Startup-focused advisory from incorporation through scaling",
+        "Corporate secretarial filings and ROC return management",
+        "Strategic foresight for businesses navigating regulatory change",
+        "Entrepreneur-first approach - simplifying statutes so you can scale",
       ],
     },
   ],
@@ -164,9 +217,9 @@ export const ABOUT_PROFILES = [
   {
     id: "2",
     name: "Aditya Nalpet",
-    designation: "Senior Associate",
+    designation: "Senior Associate - M.com, B.Com",
     qualifications: ["M.Com", "B.Com"],
-    experience: "14+ years of experience",
+    experience: "14+ Years of Professional Experience",
     expertise: [
       "Strategic Tax Planning: Designing high-impact tax strategies to legally reduce outflows for startups and established enterprises.",
       "Statutory Compliance: Managing end-to-end filing for GST, Income Tax, and ROC returns to ensure zero-error reporting.",
@@ -174,6 +227,22 @@ export const ABOUT_PROFILES = [
       "Audit Management: Leading complex tax and audit assignments with a focus on simplifying the Indian tax landscape for entrepreneurs.",
     ],
     initials: "AN",
-    bio: "Aditya is a seasoned tax and compliance professional with over 14 years of experience. Before joining our firm, he spent nearly 12 years as a Manager at K S Ramkumar & Co., Chartered Accountants where he spearheaded diverse tax and audit assignments for a wide array of business sectors.\n\nHis core mission is to bridge the gap between complex legislative requirements and practical business growth. Aditya specialises in navigating the intricacies of the Income Tax Act and GST, helping clients maintain seamless compliance while identifying opportunities for fiscal optimisation. Known for his \"entrepreneur-first\" approach, he provides the clarity and strategic foresight necessary for businesses to scale without the burden of tax uncertainty.",
+    sections: [
+      {
+        title: "Professional Profile",
+        content:
+          "Aditya Nalpet is a seasoned tax and compliance professional whose career spans over 14 years across diverse industries and client profiles. He joined Sahana D M & Associates bringing with him a wealth of hands-on expertise in statutory compliance, direct taxation, and corporate advisory. His core philosophy is bridging the gap between complex legislative requirements and practical business growth — ensuring that regulatory obligations never become a bottleneck to scaling.",
+      },
+      {
+        title: "Domestic Taxation & Compliance Expertise (K S Ramkumar & Co.)",
+        content:
+          "Prior to joining the firm, Aditya spent nearly 12 years as a Manager at K S Ramkumar & Co., Chartered Accountants, one of Bengaluru's reputable domestic CA firms. During this tenure, he led a wide array of tax and audit assignments spanning startups, SMEs, and established enterprises across sectors including manufacturing, trading, and services. He developed deep proficiency in end-to-end Income Tax compliance — from return filing and advance tax planning to managing scrutiny assessments and departmental proceedings. His consistent exposure to high-volume, multi-sector work sharpened his ability to deliver precise, zero-error reporting under demanding timelines.",
+      },
+      {
+        title: "GST, Corporate Advisory & Audit Management",
+        content:
+          "Aditya's expertise extends well beyond compliance into proactive fiscal strategy. He specialises in designing high-impact tax structures that legally optimise outflows for both early-stage startups and mature enterprises. On the GST front, he manages end-to-end filing, reconciliations, and advisory on business-model-specific applicability. His audit management experience includes leading complex tax and statutory audit assignments, with a particular focus on demystifying the Indian tax landscape for entrepreneurs. Known for his methodical, entrepreneur-first approach, Aditya provides the strategic foresight businesses need to grow with confidence and regulatory resilience.",
+      },
+    ],
   },
 ] as const;

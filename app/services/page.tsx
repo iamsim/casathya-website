@@ -4,7 +4,7 @@ import { ServicesView } from "@/components/views";
 export const metadata: Metadata = {
   title: "Our Expertise | Chartered Accountants",
   description:
-    "A synergy of global standards and local mastery: international taxation & global mobility, strategic domestic taxation & GST, audit, assurance and governance.",
+    "A synergy of Big 4 rigour and boutique-style accountability across international taxation, domestic tax planning, GST, audit, governance, and corporate advisory.",
 };
 
 export default function Page() {

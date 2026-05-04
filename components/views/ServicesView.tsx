@@ -33,7 +33,7 @@ export function ServicesView() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...defaultTransition, delay: 0.1 }}
           >
-            Our expertise
+            Our Expertise
           </motion.h1>
           <motion.p
             className="mx-auto mt-6 max-w-2xl text-lg text-[var(--cream)]/75"
@@ -41,7 +41,7 @@ export function ServicesView() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...defaultTransition, delay: 0.2 }}
           >
-            A synergy of global standards and local mastery.
+            A synergy of Big 4 rigour and boutique-style accountability. We deliver a 360-degree financial framework built on over two decades of combined experience in tax, audit, and governance.
           </motion.p>
         </div>
       </section>
@@ -80,8 +80,27 @@ export function ServicesView() {
             viewport={{ once: true }}
             transition={defaultTransition}
           >
-            Core Service Verticals
+            Core service verticals
           </motion.h2>
+          <motion.p
+            className="mt-4 text-center font-serif text-2xl font-semibold text-[var(--navy)] sm:text-3xl"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ ...defaultTransition, delay: 0.05 }}
+          >
+            Where we deliver value
+          </motion.p>
+          <motion.p
+            className="mt-3 text-center text-sm text-[var(--muted)]"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ ...defaultTransition, delay: 0.1 }}
+          >
+            Every engagement is led by a partner with direct, hands-on
+            expertise in that domain.
+          </motion.p>
           <motion.div
             className="mt-12 space-y-16"
             variants={staggerContainer}
@@ -97,7 +116,7 @@ export function ServicesView() {
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-baseline sm:gap-6">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--gold-muted)] font-serif text-lg font-semibold text-[var(--gold)]">
-                    {index + 1}
+                    {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>
                     <h3 className="font-serif text-xl font-semibold text-[var(--navy)] sm:text-2xl">
@@ -136,17 +155,18 @@ export function ServicesView() {
         >
           <div>
             <p className="font-serif text-lg font-semibold text-[var(--cream)]">
-              Need a custom solution?
+              Need a tailored solution?
             </p>
             <p className="mt-1 text-sm text-[var(--cream)]/80">
-              We tailor our expertise to your business needs.
+              We shape our expertise around your business. Schedule a
+              consultation - we respond within 24 hours.
             </p>
           </div>
           <Link
             href="/contact"
             className="shrink-0 rounded-lg bg-[var(--gold)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--gold-light)]"
           >
-            Get in touch
+            Get in touch →
           </Link>
         </motion.div>
       </section>
