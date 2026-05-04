@@ -114,7 +114,7 @@ export function AboutView() {
                           </div>
                         </div>
                       ))
-                    ) : "bio" in profile && profile.bio ? (
+                    ) : "bio" in profile && typeof profile.bio === "string" ? (
                       <div className="space-y-2 text-[var(--muted)] leading-relaxed">
                         {profile.bio.split(/\n\n+/).map((para, i) => (
                           <p key={i}>{para}</p>
