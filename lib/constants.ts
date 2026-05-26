@@ -6,7 +6,7 @@
 export const SITE_CONFIG = {
   name: "Chartered Accountants",
   tagline: "Trusted expertise. Clear guidance.",
-  email: "info@casatya.in",
+  email: "contact@casatya.in",
   phone: "+91-9611793679",
 } as const;
 
@@ -36,9 +36,9 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO_CONFIG = {
-  headline: "Expert Chartered Accountancy & Advisory",
+  headline: "Where Complex Tax Laws Meet Clear, Confident Guidance",
   subheadline:
-    "We provide high-impact taxation and audit services that bridge the gap between complex statutory requirements and seamless business operations. Established in 2018, our firm is built on a foundation of technical excellence, meticulous advocacy, and a commitment to end-to-end accountability",
+    "Whether you're a founder navigating GST, a corporate managing cross-border interests, or an expatriate settling your Indian tax affairs — we bring Big 4 rigour and the personal attention your situation deserves. Established 2018, Bengaluru.",
   primaryCta: "Get in touch",
   secondaryCta: "Our expertise",
 } as const;
@@ -48,45 +48,45 @@ export const EXPERTISE_CONFIG = [
   {
     title: "International Taxation & Global Mobility",
     description:
-      "Leveraging a specialised background at Big4, we navigate the complexities of cross-border financial interests.",
+      "From expatriate tax management to DTAA structuring, we handle the full complexity of cross-border financial interests - backed by five years of specialised practice at KPMG.",
     icon: "tax",
   },
   {
-    title: "Strategic Domestic Taxation & GST",
+    title: "Domestic Taxation & GST",
     description:
-      "We simplify the Indian tax landscape for entrepreneurs and corporate entities through proactive planning.",
+      "We go beyond filing returns. From advance tax planning and scrutiny assessments to GST advisory and litigation representation — we keep your business compliant and your outflows optimised.",
     icon: "gst",
   },
   {
     title: "Audit, Assurance & Governance",
     description:
-      "With a combined history of leading audits for listed companies, PSUs, and startups, we provide robust financial oversight.",
+      "Whether you're a startup, an NBFC, or a listed company - we bring structured financial oversight that gives founders, boards, and stakeholders genuine confidence in the numbers.",
     icon: "audit",
   },
 ] as const;
 
 export const WHY_US_CONFIG = [
   {
-    title: "12+ Years of Proven Pedigree",
+    title: "Credibility",
     description:
-      "Our leadership brings a blend of Big 4 consulting and over a decade of hands-on management at reputable domestic firms.",
+      "Big 4 Depth, Boutique Attention Our leadership brings specialised international tax experience from KPMG and over 14 years of hands-on domestic practice — so you get institutional-grade expertise without being treated like a ticket number.",
   },
   {
-    title: "Litigation-Ready Advocacy",
+    title: "Track Record",
     description:
-      "We don't just file returns; we represent your interests, managing over 100 tax assessments annually and handling appeals at the CIT level.",
+      "Litigation-Ready, Not Just Compliant We don't stop at filing. With 100+ tax assessments managed annually and active representation at CIT-level appeals, we stand with you when it matters most.",
   },
   {
-    title: "Entrepreneur-First Approach",
+    title: "Approach",
     description:
-      "We specialise in simplifying complex statutes so you can focus on scaling your business.",
+      "Built Around Your Business, Not a Template Whether you're a founder, a corporate, or an expatriate — we shape our advice around your situation. Complex statutes translated into clear decisions, every time.",
   },
 ] as const;
 
 export const CTA_CONFIG = {
-  headline: "Ready to work with a trusted partner?",
-  subtext: "Schedule a consultation or send us an enquiry. We respond within 24 hours.",
-  buttonLabel: "Contact us today",
+  headline: "Every client starts with a conversation.",
+  subtext: "Whether you have a specific question or just want to understand your options — we're easy to talk to, and the first consultation is on us.",
+  buttonLabel: "Let's Talk",
 } as const;
 
 /** Our Expertise page: intro and core service verticals */
