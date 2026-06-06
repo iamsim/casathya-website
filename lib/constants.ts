@@ -29,7 +29,7 @@ export const CONTACT_CONFIG = {
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Our Expertise" },
-  { href: "/blogs", label: "Blogs" },
+  // { href: "/blogs", label: "Blogs" }, // Hidden until blog content is ready
   { href: "/about", label: "About" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Let's Connect" },
