@@ -19,16 +19,42 @@ export function ContactView() {
     `${address.city} ${address.pincode}`,
   ].filter(Boolean) as string[];
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
+    if (!formId) {
+      setStatus("error");
+      return;
+    }
+
     setStatus("submitting");
-    // Replace with your API call or form service (e.g. Formspree, custom endpoint)
-    setTimeout(() => {
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message: description,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
       setStatus("success");
       setName("");
       setEmail("");
       setDescription("");
-    }, 800);
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -221,6 +247,18 @@ export function ContactView() {
                         disabled={status === "submitting"}
                       />
                     </div>
+                    {status === "error" && (
+                      <p className="text-sm text-red-600" role="alert">
+                        Something went wrong. Please try again or email us at{" "}
+                        <a
+                          href={`mailto:${CONTACT_CONFIG.email}`}
+                          className="font-medium underline hover:text-red-700"
+                        >
+                          {CONTACT_CONFIG.email}
+                        </a>
+                        .
+                      </p>
+                    )}
                     <button
                       type="submit"
                       disabled={status === "submitting"}
