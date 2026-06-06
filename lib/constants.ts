@@ -36,7 +36,7 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO_CONFIG = {
-  headline: "Where Complex Tax Laws Meet Clear, Confident Guidance",
+  headline: "Where Complex Tax Laws meet clear, confident guidance",
   subheadline:
     "Whether you're a founder navigating GST, a corporate managing cross-border interests, or an expatriate settling your Indian tax affairs — we bring Big 4 rigour and the personal attention your situation deserves. Established 2018, Bengaluru.",
   primaryCta: "Get in touch",
